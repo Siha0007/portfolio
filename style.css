@@ -37,7 +37,7 @@ img {
   cursor: pointer;
   width: 30px;
   position: absolute;
-  right: 200px;
+  right: 208px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 1000;
@@ -52,6 +52,29 @@ img {
 }
 
 @media (max-width: 800px) {
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 480px;
+    height: 450px;
+    margin-top: 170px;
+  }
+
+  /* temaernes grid */
+  .grid_1_1 a img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .grid_1_1 a img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
   .menu {
     display: none;
   }
@@ -115,6 +138,16 @@ img {
   line-height: 1;
   padding: 10px;
 }
-img {
+.logo {
   filter: blur(4px);
+}
+.hoved {
+  position: fixed;
+  top: 500px;
+
+  /*om mig*/
+
+  h3 {
+    top: 10px;
+  }
 }
