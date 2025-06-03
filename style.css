@@ -37,8 +37,8 @@ img {
   cursor: pointer;
   width: 30px;
   position: absolute;
-  right: 208px;
-  top: 50%;
+  right: 49px;
+  top: 9%;
   transform: translateY(-50%);
   z-index: 1000;
 }
@@ -99,8 +99,8 @@ img {
   nav.active .menu {
     display: block;
     position: absolute;
-    top: 400px;
-    left: 173px;
+    right: -289px;
+    top: 10%;
     width: 100%;
     z-index: 1;
   }
@@ -119,35 +119,49 @@ img {
     font-style: normal;
   }
 }
-.viola {
-  font-family: "anton", sans-serif;
-  color: red;
-  filter: blur(2px);
-  opacity: 0.8;
-  font-size: 6.8rem;
-}
 
-.visions {
-  font-family: "anton", sans-serif;
-  color: red;
-  filter: blur(2px);
-  opacity: 0.8;
-  font-size: 4.8rem;
-}
 .navn {
   line-height: 1;
   padding: 10px;
 }
 .logo {
   filter: blur(4px);
+  width: 300px;
+}
+
+.logotema {
+  width: 200px;
+  right: 125px;
+  position: fixed;
 }
 .hoved {
   position: fixed;
-  top: 500px;
+  top: 280px;
+}
 
-  /*om mig*/
+h3 {
+  top: 200px;
+  text-align: center;
+  margin: 150px auto;
+  padding: 10px;
+  max-width: 300px;
+}
 
-  h3 {
-    top: 10px;
-  }
+.ommig {
+  font-size: 3rem;
+  top: 160px;
+  left: 80px;
+  position: relative;
+}
+
+.ommigimg {
+  top: -80px;
+  position: relative;
+}
+
+.tema2 {
+  font-size: 2rem;
+  top: 160px;
+  left: 180px;
+  position: relative;
 }
