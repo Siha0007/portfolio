@@ -6,11 +6,14 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
 }
 
 /* LOGO OG BURGERMENU */
@@ -26,17 +29,18 @@ img {
 .logo2 {
   display: block;
   filter: blur(9px);
-  width: 1400px;
-  padding-left: 43px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-/*MENU TIL DESKTOP */
 .menu {
   list-style: none;
   display: flex;
-  gap: 840px;
-  transition: all 0.3s ease;
-  position: relative;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* Menu navigation (links) */
@@ -87,11 +91,11 @@ h1 {
 }
 
 h3 {
-  top: -81px;
+  top: -55px;
   text-align: center;
-  margin: 150px auto;
-  padding: 10px;
-  max-width: 300px;
+  margin: 43px auto;
+  padding: 31px;
+  max-width: 753px;
   position: relative;
 }
 
@@ -123,13 +127,13 @@ h3 {
   gap: 20px;
   width: 100%;
   max-width: 1450px;
-  margin-left: 20px;
+  margin-left: 0px;
 }
 
 .grid_1_1 a img {
-  width: 100%;
+  /* width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: cover; */
   transition: transform 0.3s ease;
 }
 
@@ -157,18 +161,20 @@ h3 {
 .forsidetitel {
   font-family: "anton", sans-serif;
   font-size: 14rem;
-  line-height: 200px;
+  line-height: 197px;
   color: #000;
-  margin: 0;
-  margin-bottom: 58px;
+  margin-top: -144px;
+  margin-bottom: -96px;
 }
 /* TEMAER   */
 
 .temacontainer img {
-  max-width: 100%;
+  max-width: 57%;
   height: auto;
   display: block;
   object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tema {
@@ -177,30 +183,41 @@ h3 {
   font-style: normal;
   font-size: 2rem;
   color: #000000;
-  top: 25px;
+  top: -25px;
   position: relative;
   left: 5px;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
 }
 
 .teksttema {
-  padding: 54px 181px;
+  padding: 36px 324px;
   text-align: left;
   border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
   width: 100%;
 }
-
-.billedeogknap,
-.tilbage,
-.teksttema,
-.gestalt {
-  flex: 1 1 300px;
+.teksttema p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
 }
 
-.billedeogknap,
-.tilbage,
-.temaer-knap {
+/* OM MIG */
+.ommigimg {
+  max-width: 600px; /* gør billedet mindre */
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: -100px;
+}
+.ommigbeskrivelse {
+  top: -108px;
   text-align: center;
+  margin: 78px auto;
+  padding-top: 40px;
+  max-width: 620px;
+  position: relative;
+  line-height: 30px;
 }
 
 /* KNAPPER */
@@ -216,6 +233,7 @@ h3 {
   font-size: 16px;
   border-radius: 3px;
   transition: background-color 0.3s ease;
+  margin: 20px;
 }
 
 .hjemmeside-knap:hover,
@@ -227,6 +245,24 @@ h3 {
   margin: 20px 0;
 }
 
+.billedeogknap,
+.tilbage,
+.teksttema,
+.gestalt {
+  flex: 1 1 300px;
+}
+
+.billedeogknap,
+.tilbage,
+.temaer-knap {
+  text-align: center;
+}
+
+.tilbagetema {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
 /* FOOTER */
 
 footer {
@@ -246,9 +282,11 @@ footer .col:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 550px;
+  gap: 2rem;
+  flex-wrap: wrap;
   padding: 2rem;
 }
+
 .footer-ring {
   padding: 0.5rem 1rem;
   border: 1px solid #000;
@@ -286,7 +324,7 @@ footer .col:last-child {
   nav.active .menu {
     display: block;
     position: absolute;
-    right: -330px;
+    right: -230px;
     top: 15%;
     width: 100%;
     z-index: 1;
@@ -334,6 +372,7 @@ footer .col:last-child {
 
   .forsidetitel {
     font-size: 2.5rem;
+    padding-top: 100px;
   }
 
   /* TEMAER MOBIL */
@@ -351,6 +390,11 @@ footer .col:last-child {
 
   .website {
     width: 230px;
+  }
+
+  .teksttema p {
+    margin-bottom: 1.2rem;
+    line-height: 1.6rem;
   }
 
   /* GRID MOBIL */
@@ -379,11 +423,19 @@ footer .col:last-child {
   .ommig {
     font-size: 3rem;
     top: 50px;
-    left: 80px;
     position: relative;
   }
   .ommigimg {
-    top: -180px;
+    top: -273px;
+    position: relative;
+  }
+
+  .ommigbeskrivelse {
+    top: -108px;
+    text-align: center;
+    margin: 78px auto;
+    padding: 119px;
+    max-width: 961px;
     position: relative;
   }
 
@@ -395,11 +447,6 @@ footer .col:last-child {
 
   .knap-link {
     margin: 20px 0;
-  }
-
-  .temaer-knap {
-    margin: 30px 0 0 0;
-    padding: 5px 10px;
   }
 
   .tilbagetema {
